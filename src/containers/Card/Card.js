@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Card.css';
 import Image1 from '../../assets/images/corporate.jpg';
 import logo from '../../assets/images/link.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faThumbsUp,faBolt,faHeart,faShare,faPaperPlane,faComment} from '@fortawesome/free-solid-svg-icons';
-const card = (props) => {
+class Card extends Component{
+  state={
+    showButton:true
+  }
+  seeMore= (event) =>{
+    event.preventDefault();
+    this.setState({showButton:false});
+    let more = document.getElementById("more");
+    more.style.display="inline"
+  }
+  render() {
+    
+    let button=this.state.showButton ?<span onClick={this.seeMore} className="see">...see more</span>:null;
     return(
         <div className="card">
           <div className="desc">
@@ -14,7 +26,7 @@ const card = (props) => {
                 </strong> and 731 other connections follow <strong>LinkedIn</strong></p>
               <div>...</div>
           </div>
-          <div className="con">
+          <div>
             <div className="container">
               <img className="image" src={logo}/>
               <div>
@@ -25,7 +37,9 @@ const card = (props) => {
               </div>
             </div>
             <div style={{display:'inline-block',marginLeft: '12px',marginBottom: '10px'}}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nam nostrum mollitia fugit tempore fugiat aliquam rem, dolor quibusdam<span className="see">...see more</span> 
+                While many industries have been hit hard by COVID-19, some are on the rise.Here are ten roles that are in-demand today and the skills to help 
+                {button}
+                <span id="more"> you land the dream job</span> 
             </div>
             <img src={Image1} alt="Avatar"/>
             <div className="icons"> 
@@ -45,6 +59,7 @@ const card = (props) => {
             
         </div>
     );
+  }
 }
 
-export default card;
+export default Card;

@@ -4,7 +4,9 @@ const wrapper = (props) => {
     return (
         <div className="Wrapper">
             <div className="LeftCard"></div>
-            {props.children}
+            <div>
+                {props.children}
+            </div>
             <div className="RightCard"></div>
         </div>
     );

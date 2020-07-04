@@ -1,0 +1,160 @@
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    height: 52px;
+    background: #283e4a;
+    width: 100%;
+  }
+  .mobile-header {
+    display: none;
+    padding: 0px 12px;
+  }
+  .search {
+      height: 34px;
+      width: 250px;
+      margin-top: 10px;
+      padding: 0px;
+      background-color: rgb(225, 233, 238);
+      border: none;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      float:left;
+  }
+  .search1 {
+    height: 18px;
+    width: 19px;
+    padding: 8px; 
+    margin-top: 10px;
+    background-color: rgb(225, 233, 238);
+    border: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    float:left;
+  }
+  .search2 {
+    height: 18px;
+    width: 19px;
+    padding: 8px; 
+    margin-top: 10px;
+    background-color: rgb(225, 233, 238);
+    border: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    float:left;
+  }
+  
+  /* Styling the header links */
+  .header a {
+    float: left;
+    color: /*rgb(225, 233, 238); */ #ccc;
+    margin: 0px 12px;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 23px;
+    line-height: 24px;
+    border-radius: 4px;
+  }
+  
+  /*Styling the logo*/
+  .header a.logo {
+    margin: 0px;
+    margin-top: -2px;
+  }
+  
+  /* Changing the background color on mouse-over */
+  .header a:hover {
+    color: white;
+  }
+  
+  /* Styling the active/current link*/
+  .header a.active {
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  
+  /* media queries
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  } */
+
+  .header-right .special {
+    /* color: rgb(225, 233, 238); */
+    color: #ccc;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 10px;
+    border-radius: 4px;
+  }
+
+  .header-right .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #dccea4;
+  }
+  .header .header-right a.text:hover {
+    color: #dccea4;
+    text-decoration: underline;
+  }
+
+  .nav-content {
+    width: 80%;
+    margin: 0  10%;
+  }
+  @media screen and (max-width: 500px) {
+    .header {
+      display: none;
+    }
+
+    .mobile-header {
+      display: flex;
+      overflow: hidden;
+      height: 52px;
+     background: #283e4a;
+     width: 100%;
+    }
+    /* .search{
+        width: 0px;
+    } */
+    .search1{
+        margin: 10px 0px;
+    }
+    /* .search2{
+        margin: 10px 0px;
+    } */
+    .profile img {
+      height: 30px;
+      width: 30px;
+      margin: 12px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+
+    .message {
+    font-size: 32px;
+    margin: 4px;
+    margin-left: 12px;
+    padding: 0px 2px;
+    color: white;
+    }
+
+    .search1 {
+      margin: 10px 0px;
+    }
+
+    
+  }
